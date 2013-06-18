@@ -28,14 +28,13 @@ As value you should type the path to the directory with images. All images from 
 
 ### Access to resources
 ```
-val stockResource = StockResources.Util.get
-val image = new Image(stockResource.googlecodePng)
-val className = stockResource.stock.watchListNumericColumn
+val stockResources = StockResources.Util.get \\ get the implementation of StockResources client bundle
+val image = new Image(stockResources.googlecodePng) \\ create an instance of Image class for googlecode.png picture
+val className = stockResources.stock.watchListNumericColumn \\ get an obfuscated name of watchListNumericColumn css class
 ```
 Xtend adds Util class into the interface. Using this class you can get the access to the implementation of the interface.
 
-Where can I get the original implementation of StockWatcher?
-------------------------------------------------------------
+If you want to compare Xtend version of StockWatcher with Java version you can find the second one here:
 https://developers.google.com/web-toolkit/tools/gwtdesigner/tutorials/StockWatcher.zip
 
 
