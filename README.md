@@ -62,7 +62,7 @@ public interface StockResources extends com.google.gwt.resources.client.ClientBu
 
 public interface StockCssResource extends CssResource {
 
-  //For every css class name and def variable from css files Xtend generates an access method
+  //For every css class and def variable from css files Xtend generates an access method
   //Also Xtend takes care about resolving name conflicts between css classes and def variables
   @ClassName(value = "watchListHeader")
   public abstract String watchListHeader();
