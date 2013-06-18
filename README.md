@@ -31,7 +31,7 @@ As value you should type the path to the directory with images. All images from 
 ```java
 public interface StockResources extends com.google.gwt.resources.client.ClientBundle {
 
-  // Xtend adds Util class into the interface which you can use to access an implementation.
+  // Xtend adds Util class into the interface which you can use to get an implementation
   @SuppressWarnings("all")
   public static class Util {
     private static StockResources INSTANCE;
