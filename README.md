@@ -28,9 +28,14 @@ As value you should type the path to the directory with images. All images from 
 
 ### Access to resources
 ```
-val stockResources = StockResources.Util.get \\ get the implementation of StockResources client bundle
-val image = new Image(stockResources.googlecodePng) \\ create an instance of Image class for googlecode.png picture
-val className = stockResources.stock.watchListNumericColumn \\ get an obfuscated name of watchListNumericColumn css class
+// get the implementation of StockResources client bundle
+val stockResources = StockResources.Util.get
+
+// create an instance of Image class for googlecode.png picture
+val image = new Image(stockResources.googlecodePng) 
+
+// get an obfuscated name of watchListNumericColumn css class
+val className = stockResources.stock.watchListNumericColumn 
 ```
 Xtend adds Util class into the interface. Using this class you can get the access to the implementation of the interface.
 
