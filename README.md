@@ -1,12 +1,13 @@
-StockWatcher example with ClientBundle active annotation 
-========================================================
+ClientBundle active annotation 
+==============================
 
 Why ClientBundle active annotation?
-___________________________________
+-----------------------------------
 ClientBundle active annotation generates extensions of CssResource and ClientBundle interfaces for you which otherwise you have to create and support manually.
 
 How to use ClientBundle active annotation?
-__________________________________________
+------------------------------------------
+
 ### Creation of new ClientBundle
 @ImageResources("org/eclpise/xtend/gwt/stockwatcher/images")
 @CssResource(value="stock", csses="org/eclpise/xtend/gwt/stockwatcher/css/StockWatcher.css")
@@ -32,7 +33,7 @@ val className = STOCK_RESOURCES.stock.watchListNumericColumn
 Xtend adds Util class into the interface. Using this class you can get the access to the implementation of the interface.
 
 Where can I get the original implementation of StockWatcher?
-____________________________________________________________
+------------------------------------------------------------
 https://developers.google.com/web-toolkit/tools/gwtdesigner/tutorials/StockWatcher.zip
 
 
