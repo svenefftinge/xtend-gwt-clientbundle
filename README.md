@@ -23,7 +23,7 @@ As value of the annotation you should type the path to the source folder.
 As value you should type the alias of resource. Later you will use it to access this resource.
 The attribute "csses" is an array of paths to css resources.
 
-@ImageResource – this annotation is used to specify image resources.
+@ImageResources – this annotation is used to specify image resources.
 As value you should type the path to the directory with images. All images from the directory will be added as resources.
 
 ### Access to resources
