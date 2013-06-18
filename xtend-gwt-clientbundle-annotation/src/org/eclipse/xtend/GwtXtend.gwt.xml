@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to="gwtxtend">
+	<inherits name="com.google.gwt.resources.Resources" />
+	<inherits name="org.eclipse.xtext.xbase.lib.Lib" />
+	<inherits name="org.eclipse.xtend2.lib.Lib" />
+	<inherits name="org.eclipse.xtend.lib.Lib" />
+	<source path='gwt' />
+</module>
