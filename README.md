@@ -1,15 +1,18 @@
-ClientBundle active annotation 
+ClientBundle Active Annotation 
 ==============================
 
-Why ClientBundle active annotation?
+Why ClientBundle Active Annotation?
 -----------------------------------
-ClientBundle active annotation generates extensions of CssResource and ClientBundle interfaces for you which otherwise you have to create and support manually.
+The ClientBundle active annotation generates the declarations of CssResource and ClientBundle interfaces for you 
+which you otherwise would have to create and maintain manually.
 
-How to use ClientBundle active annotation?
+It automatically keeps the css content and the corrsponding Java interface in sync.
+
+How to use the ClientBundle Active Annotation?
 ------------------------------------------
 
 ### Creation of new ClientBundle
-```java
+```xtend
 @ImageResources("org/eclpise/xtend/gwt/stockwatcher/images")
 @CssResource(value="stock", csses="org/eclpise/xtend/gwt/stockwatcher/css/StockWatcher.css")
 @ClientBundle("/Users/kosyakov/Documents/workspaces/vaadin/xtend-gwt-clientbundle/stockwatcher/src/")
@@ -26,6 +29,7 @@ The attribute "csses" is an array of paths to css resources.
 @ImageResources – this annotation is used to specify image resources.
 As value you should type the path to the directory with images. All images from the directory will be added as resources.
 
+For more Xtend goodness for supporting GWT see https://github.com/DJCordhose/todomvc-xtend-gwt
 
 ### Example of generated code
 ```java
