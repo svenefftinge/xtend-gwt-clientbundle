@@ -10,11 +10,11 @@ How to use ClientBundle active annotation?
 
 ### Creation of new ClientBundle
 ```
-	@ImageResources("org/eclpise/xtend/gwt/stockwatcher/images")
-	@CssResource(value="stock", csses="org/eclpise/xtend/gwt/stockwatcher/css/StockWatcher.css")
-	@ClientBundle("/Users/kosyakov/Documents/workspaces/vaadin/xtend-gwt-clientbundle/stockwatcher/src/")
-	interface StockResources {
-	}
+@ImageResources("org/eclpise/xtend/gwt/stockwatcher/images")
+@CssResource(value="stock", csses="org/eclpise/xtend/gwt/stockwatcher/css/StockWatcher.css")
+@ClientBundle("/Users/kosyakov/Documents/workspaces/vaadin/xtend-gwt-clientbundle/stockwatcher/src/")
+interface StockResources {
+}
 ```
 @ClientBundle - this annotation is used to declare an interface as ClientBundle. 
 As value of the annotation you should type the path to the source folder.
@@ -28,9 +28,9 @@ As value you should type the path to the directory with images. All images from 
 
 ### Access to resources
 ```
-	val stockResource = StockResources.Util.get
-	val image = new Image(STOCK_RESOURCES.googlecodePng)
-	val className = STOCK_RESOURCES.stock.watchListNumericColumn
+val stockResource = StockResources.Util.get
+val image = new Image(stockResource.googlecodePng)
+val className = stockResource.stock.watchListNumericColumn
 ```
 Xtend adds Util class into the interface. Using this class you can get the access to the implementation of the interface.
 
