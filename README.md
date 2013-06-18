@@ -9,7 +9,7 @@ How to use ClientBundle active annotation?
 ------------------------------------------
 
 ### Creation of new ClientBundle
-```
+```java
 @ImageResources("org/eclpise/xtend/gwt/stockwatcher/images")
 @CssResource(value="stock", csses="org/eclpise/xtend/gwt/stockwatcher/css/StockWatcher.css")
 @ClientBundle("/Users/kosyakov/Documents/workspaces/vaadin/xtend-gwt-clientbundle/stockwatcher/src/")
@@ -28,7 +28,7 @@ As value you should type the path to the directory with images. All images from 
 
 
 ### Example of generated code
-```
+```java
 public interface StockResources extends com.google.gwt.resources.client.ClientBundle {
 
   // Xtend adds Util class into the interface which you can use to access an implementation.
@@ -62,7 +62,8 @@ public interface StockResources extends com.google.gwt.resources.client.ClientBu
 
 public interface StockCssResource extends CssResource {
 
-  //For every css class name and def variable Xtend generates an access method
+  //For every css class name and def variable from css files Xtend generates an access method
+  //Also Xtend takes care about resolving name conflicts between css classes and def variables
   @ClassName(value = "watchListHeader")
   public abstract String watchListHeader();
   
@@ -75,7 +76,7 @@ public interface StockCssResource extends CssResource {
 ```
 
 ### Access to resources
-```
+```java
 // get the implementation of StockResources client bundle
 val stockResources = StockResources.Util.get
 
