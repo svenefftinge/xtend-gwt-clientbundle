@@ -26,6 +26,54 @@ The attribute "csses" is an array of paths to css resources.
 @ImageResources – this annotation is used to specify image resources.
 As value you should type the path to the directory with images. All images from the directory will be added as resources.
 
+
+### Example of generated code
+```
+public interface StockResources extends com.google.gwt.resources.client.ClientBundle {
+
+  // Xtend adds Util class into the interface which you can use to access an implementation.
+  @SuppressWarnings("all")
+  public static class Util {
+    private static StockResources INSTANCE;
+    
+    public static StockResources get() {
+      if (INSTANCE == null) {
+      	INSTANCE = com.google.gwt.core.client.GWT.create(StockResources.class);
+      	// Util class takes care about injecting css resources
+      	INSTANCE.stock().ensureInjected();
+      }
+      return INSTANCE;
+    }
+  }
+  
+  // Xtend generates an access method for css resources
+  @Source(value = "org/eclpise/xtend/gwt/stockwatcher/css/StockWatcher.css")
+  public abstract StockCssResource stock();
+  
+  // For every image from the image directory Xtend generates an access method 
+  @Source(value = "org/eclpise/xtend/gwt/stockwatcher/images/blue_gradient.gif")
+  public abstract ImageResource blue_gradientGif();
+  
+  @Source(value = "org/eclpise/xtend/gwt/stockwatcher/images/drafts.gif")
+  public abstract ImageResource draftsGif();
+  
+  ...
+}
+
+public interface StockCssResource extends CssResource {
+
+  //For every css class name and def variable Xtend generates an access method
+  @ClassName(value = "watchListHeader")
+  public abstract String watchListHeader();
+  
+  @ClassName(value = "gwt-PushButton-up")
+  public abstract String gwtPushButtonUp();
+  
+  @ClassName(value = "Caption")
+  public abstract String caption();
+...
+```
+
 ### Access to resources
 ```
 // get the implementation of StockResources client bundle
@@ -37,7 +85,6 @@ val image = new Image(stockResources.googlecodePng)
 // get an obfuscated name of watchListNumericColumn css class
 val className = stockResources.stock.watchListNumericColumn 
 ```
-Xtend adds Util class into the interface. Using this class you can get the access to the implementation of the interface.
 
 If you want to compare Xtend version of StockWatcher with Java version you can find the second one here:
 https://developers.google.com/web-toolkit/tools/gwtdesigner/tutorials/StockWatcher.zip
